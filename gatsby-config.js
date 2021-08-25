@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.ivanmercedes.com",
     title: "ivanmercedes",
   },
   plugins: [
@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -20,14 +21,31 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    // "gatsby-plugin-sitemap",
+    // {
+    //   // resolve: "gatsby-plugin-manifest",
+    //   // options: {
+    //   //   icon: "src/images/icon.png",
+    //   // },
+    // },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        icon: "src/images/icon.png",
+        defaults: {
+          formats: [`auto`, `webp`, "jpg"],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
       },
     },
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
