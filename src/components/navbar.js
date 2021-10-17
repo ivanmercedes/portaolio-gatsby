@@ -25,13 +25,13 @@ const ButtonMenu = styled.button`
   padding: 0.5rem 1.8rem 0.5rem 1.8rem;
   font-weight: 700;
   @media (max-width: 750px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 `;
 
 const Navbar = () => {
   return (
-    <Nav className="navbar navbar-expand navbar-dark">
+    <Nav className="navbar navbar-expand navbar-dark" data-aos="fade-down">
       <div className="container">
         {/* <a className="navbar-brand" href="/">
           Navbar

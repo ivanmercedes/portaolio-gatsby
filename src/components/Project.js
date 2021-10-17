@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Card = styled.div`
   background-color: #2b2b2b;
   box-shadow: 0 1.6rem 3.6rem rgb(0 0 0 / 20%);
-
+ height: 100%;
   .title {
     text-align: center;
     padding: 1rem;

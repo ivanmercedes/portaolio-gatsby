@@ -11,8 +11,8 @@ const ProjectsLists = styled.section`
   background-repeat: no-repeat;
   background-position: center right;
   position: relative;
-  @media (max-width: 768px){
-    background-image:  unset;
+  @media (max-width: 768px) {
+    background-image: unset;
   }
 `;
 
@@ -40,10 +40,19 @@ const Portafolio = () => {
           node {
             name
             originalId
+            category
             thumbnail {
               gatsbyImageData(
                 width: 600
-                height: 450
+
+                placeholder: BLURRED
+                forceBlurhash: false
+              )
+            }
+            images {
+              gatsbyImageData(
+                width: 600
+
                 placeholder: BLURRED
                 forceBlurhash: false
               )
@@ -54,6 +63,7 @@ const Portafolio = () => {
     }
   `);
 
+  console.log(projects);
   const projectsList = projects.allDatoCmsProyecto.edges;
   return (
     <ProjectsLists id="proyectos">

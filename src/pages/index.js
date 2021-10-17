@@ -11,6 +11,10 @@ const IndexPage = () => {
     <Layout>
       <Helmet>
         <title>Ivan Mercedes</title>
+        <meta
+          name="description"
+          content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+        />
       </Helmet>
       <About />
       <Portafolio />

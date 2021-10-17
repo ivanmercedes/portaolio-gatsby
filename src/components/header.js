@@ -1,10 +1,15 @@
 import * as React from "react";
+import AOS from "aos";
 import styled from "styled-components";
 import Navbar from "./navbar";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Particles from "react-particles-js";
 import Config from "./particle.config";
+
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+
 const Hero = styled.header`
   position: relative;
   background-color: #212121;
@@ -74,6 +79,13 @@ const Avatar = styled.div`
 `;
 
 const Header = () => {
+  React.useEffect(() => {
+    AOS.init({
+      mirror: true,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -82,17 +94,20 @@ const Header = () => {
 
         <div className="container h-100">
           <HeroWrapper className="row justify-content-center h-100">
-            <Info className="col-md-4 align-self-center h-100">
+            <Info
+              className="col-md-4 align-self-center h-100"
+              data-aos="fade-right"
+            >
               <Hi className="m-0">Hola 👋 soy</Hi>
               <Name>Ivan Mercedes</Name>
               <Sub>Full-stack Web Developer 👨🏻‍💻</Sub>
               <p style={{ fontSize: "1.2rem" }}>
-                Soy un desarrollador web con experiencia en diversas
-                tecnologias.
+                Soy un desarrollador web con experiencia en los Stacks LAMP y
+                MERN ademas de diversas tecnologias.
               </p>
             </Info>
 
-            <Avatar className="col-md-7  text-end">
+            <Avatar className="col-md-7  text-end" data-aos="fade-left">
               <StaticImage
                 src="../images/avatar.webp"
                 quality={100}
