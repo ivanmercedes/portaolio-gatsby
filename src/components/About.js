@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import img from "../images/side-element.svg";
 import RamdonFigure from "./RandomFigure";
-import Slider from "./Slider";
 
 const AbouttsLists = styled.section`
   background-image: url(${img});
@@ -89,7 +88,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Slider />
 
       <RamdonFigure />
     </AbouttsLists>
