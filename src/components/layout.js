@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Header from "./header";
 
 import "./scss/app.scss";
 import { createGlobalStyle } from "styled-components";
@@ -17,7 +16,7 @@ body {
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+     
       {children}
       <Footer />
       <GlobalStyle />
