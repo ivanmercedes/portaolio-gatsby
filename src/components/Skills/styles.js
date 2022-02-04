@@ -1,7 +1,5 @@
-import React from "react";
-
 import styled from "styled-components";
-import img from "../images/side-element.svg";
+import img from "../../images/side-element.svg";
 
 const SliderSection = styled.section`
   background-image: url(${img});
@@ -33,38 +31,34 @@ const FlexRow = styled.div`
 `;
 
 const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #262626;
   flex: 0 0 45%;
   margin: 15px;
   padding: 1rem;
   box-shadow: 2px 2px 7px #0000004a;
   border-radius: 5px;
-  h1{
+  h1 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
   }
 `;
-const Skills = () => {
-  return (
-    <SliderSection className="mt-4">
-      <div className="container">
-        <Title className="text-center">Mis Habilidades</Title>
 
-        <FlexRow>
-          <Box>
-            <h1>Frontend</h1>
-          </Box>
-          <Box>
-            <h1>Backend</h1>
-          </Box>
-          <Box>
-            <h1>Backend</h1>
-          </Box>
-        </FlexRow>
-      </div>
-    </SliderSection>
-  );
-};
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 300px;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+`;
 
-export default Skills;
+const Skill = styled.div`
+  flex: 1 0 50%;
+`;
+
+export { SliderSection, Title, FlexRow, Box, SkillList, Skill };

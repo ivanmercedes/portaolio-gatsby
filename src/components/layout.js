@@ -4,19 +4,20 @@ import PropTypes from "prop-types";
 import "./scss/app.scss";
 import { createGlobalStyle } from "styled-components";
 import Footer from "./Footer";
-// import Scroll from "./scroll";
 
 const GlobalStyle = createGlobalStyle`
 body {
-    background: #262626!important;
+    background: #262626 !important;
     color: white;
+}
+section, footer, main {
+  overflow: hidden;
 }
 `;
 
 const Layout = ({ children }) => {
   return (
     <>
-     
       {children}
       <Footer />
       <GlobalStyle />

@@ -58,7 +58,7 @@ const About = () => {
             />
           </div>
           <div className="col-md-4 order-0 order-lg-1 align-self-center">
-            <Title>Sobre mi 🙋🏻‍♂️</Title>
+            <Title>Sobre mi</Title>
             <Desc>
               Soy <span> Iván Mercedes</span>, un programador Web Full-Stack
               talentoso con habilidades de desarrollo web tanto en el Front-end

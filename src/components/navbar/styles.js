@@ -23,7 +23,6 @@ const LinkMenu = styled.div`
   }
 `;
 
-
 const ButtonMenu = styled.button`
   padding: 0.5rem 1.8rem 0.5rem 1.8rem;
   font-weight: 700;
@@ -32,10 +31,4 @@ const ButtonMenu = styled.button`
   }
 `;
 
-
-
-export {
-    Nav,
-    LinkMenu,
-    ButtonMenu
-}
+export { Nav, LinkMenu, ButtonMenu };

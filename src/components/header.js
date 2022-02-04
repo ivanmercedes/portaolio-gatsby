@@ -1,7 +1,7 @@
 import * as React from "react";
 import AOS from "aos";
 import styled from "styled-components";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Particles from "react-particles-js";
