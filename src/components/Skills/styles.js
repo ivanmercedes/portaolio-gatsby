@@ -40,10 +40,14 @@ const Box = styled.div`
   padding: 1rem;
   box-shadow: 2px 2px 7px #0000004a;
   border-radius: 5px;
-  h1 {
+  h2 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
+    color: #66d9ef;
+  }
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
   }
 `;
 
@@ -51,14 +55,32 @@ const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
   margin-top: 1rem;
   text-align: center;
+  margin-left: 7rem;
+  @media (max-width: 768px) {
+    margin-left: 2rem;
+    max-width: 100%;
+  }
+  @media (max-width: 568px) {
+    margin-left: 0;
+    max-width: 100%;
+  }
 `;
 
 const Skill = styled.div`
+  text-align: left;
   flex: 1 0 50%;
+  @media (max-width: 568px) {
+    flex: 1 0 100%;
+    text-align: center;
+  }
+  margin-bottom: 1rem;
+  p {
+    color: #7a7a7a;
+  }
 `;
 
 export { SliderSection, Title, FlexRow, Box, SkillList, Skill };
