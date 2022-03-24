@@ -25,12 +25,46 @@ const BlogPost = styled.div`
 
 const Post = ({ data }) => (
   <Layout>
+
+    {console.log(data.datoCmsBlog)}
     <Helmet>
       <title>{data.datoCmsBlog.title}</title>
       <meta
         name="description"
         content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
       />
+
+      <meta
+        name="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+
+      {/* <!-- Google / Search Engine Tags --> */}
+      <meta itemprop="name" content={data.datoCmsBlog.title} />
+      <meta
+        itemprop="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta itemprop="image" content={data.datoCmsBlog.thumbnail.url} />
+
+      {/* <!-- Facebook Meta Tags --> */}
+      <meta property="og:url" content={`https://ivanmercedes.com/blog/${data.datoCmsBlog.postSlug}`} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={data.datoCmsBlog.title} />
+      <meta
+        property="og:description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta property="og:image" content={data.datoCmsBlog.thumbnail.url} />
+
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={data.datoCmsBlog.title} />
+      <meta
+        name="twitter:description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta name="twitter:image" content={data.datoCmsBlog.thumbnail.url} />
     </Helmet>
     <Navbar />
     <article className="container">
@@ -54,6 +88,10 @@ export const query = graphql`
   query Posts($slug: String!) {
     datoCmsBlog(postSlug: { eq: $slug }) {
       title
+      postSlug
+      thumbnail {
+        url
+      }
       contentNode {
         childMarkdownRemark {
           html
