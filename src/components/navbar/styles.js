@@ -1,13 +1,39 @@
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background-color: #212121b3;
+  background-color: #212121;
   padding: 1rem 0 1rem 0;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+`;
+
+const NavUlList = styled.ul`
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: auto;
+
+  li {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    div {
+      a {
+        color: rgba(255, 255, 255, 0.55);   
+      }
+    }
+  }
 `;
 
 const LinkMenu = styled.div`
@@ -31,4 +57,4 @@ const ButtonMenu = styled.button`
   }
 `;
 
-export { Nav, LinkMenu, ButtonMenu };
+export { Nav, LinkMenu, ButtonMenu, NavContainer, NavUlList };

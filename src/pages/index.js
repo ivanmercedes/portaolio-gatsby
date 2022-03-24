@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Header from "../components/header";
-import Layout from "../components/layout";
-import Portafolio from "../components/Portafolio";
-import Skills from "../components/Skills";
 
-// markup
+import Header from "../components/header";
+import About from "../components/Home/About";
+import Contact from "../components/Home/Contact";
+import Portafolio from "../components/Home/Portafolio";
+import Skills from "../components/Home/Skills";
+import Layout from "../components/layout";
+
 const IndexPage = () => {
   return (
     <Layout>

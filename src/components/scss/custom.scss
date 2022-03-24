@@ -165,7 +165,7 @@
   }
 }
 
-//Create random animations
+
 @for $i from 1 to 20 {
   $randomlist: randomVList();
   @while length($randomlist) < 3 {
@@ -178,7 +178,7 @@
   position: absolute;
   opacity: 0;
   overflow: visible;
-  background-size: contain; //auto|length|cover|contain|initial|inherit
+  background-size: contain; 
 }
 
 @for $i from 1 to 20 {
@@ -186,8 +186,6 @@
     $position: v(random(10), random(10));
     left: nth($position, 1);
     top: nth($position, 2);
-    //$duration: 12+ random(7);
-    //for demo:
     $duration: 15 + random(5);
     animation: animation#{$i} linear #{$duration}s infinite;
     $size: 12px + random(20);
@@ -200,8 +198,6 @@
 
 @for $i from 1 through 20 {
   .anim-delay#{$i} {
-    //$animationdelay: random(20);
-    //for demo:
     $animationdelay: random(5);
     animation-delay: #{$animationdelay}s;
   }
