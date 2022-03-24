@@ -28,6 +28,11 @@ const NavUlList = styled.ul`
   li {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+
+    @media (max-width:750px){
+      padding-right: 0.3rem;
+      padding-left: 0.3rem;
+    }
     div {
       a {
         color: rgba(255, 255, 255, 0.55);   
@@ -45,7 +50,7 @@ const LinkMenu = styled.div`
     text-decoration: none;
   }
   @media (max-width: 750px) {
-    font-size: 1rem;
+    font-size: .899rem;
   }
 `;
 
@@ -53,7 +58,7 @@ const ButtonMenu = styled.button`
   padding: 0.5rem 1.8rem 0.5rem 1.8rem;
   font-weight: 700;
   @media (max-width: 750px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 `;
 
