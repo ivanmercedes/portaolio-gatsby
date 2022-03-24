@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Navbar from "../components/Navbar";
 
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const BlogPost = styled.div`
   background-color: #212121;
@@ -13,23 +14,31 @@ const BlogPost = styled.div`
   max-width: 970px;
   margin: 7rem auto;
 
-  h2{
+  h2 {
     font-weight: bold;
     color: #66d9ef;
   }
-  img{
+  img {
     max-width: 100%;
   }
 `;
 
 const Post = ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>{data.datoCmsBlog.title}</title>
+      <meta
+        name="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+    </Helmet>
     <Navbar />
     <article className="container">
       <BlogPost>
-        <h1 className="sheet__title">{data.datoCmsBlog.title}</h1>
+        <h1 className="blog_title">{data.datoCmsBlog.title}</h1>
         <div
-          className="sheet__body"
+          className="blog_body"
+          style={{ fontSize: 17 }}
           dangerouslySetInnerHTML={{
             __html: data.datoCmsBlog.contentNode.childMarkdownRemark.html,
           }}
