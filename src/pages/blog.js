@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 

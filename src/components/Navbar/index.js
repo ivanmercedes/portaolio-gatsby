@@ -5,7 +5,7 @@ import { ButtonMenu, LinkMenu, Nav, NavContainer, NavUlList } from "./styles";
 const Navbar = () => {
   
   return (
-    <Nav data-aos="fade-down">
+    <Nav >
       <div className="container">
         <NavContainer  id="navbarSupportedContent">
           <NavUlList>
