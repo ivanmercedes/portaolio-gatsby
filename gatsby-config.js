@@ -47,6 +47,7 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
