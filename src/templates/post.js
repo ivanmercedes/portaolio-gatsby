@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Navbar from "../components/Navbar";
 
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const BlogPost = styled.div`
   background-color: #212121;
@@ -13,23 +14,65 @@ const BlogPost = styled.div`
   max-width: 970px;
   margin: 7rem auto;
 
-  h2{
+  h2 {
     font-weight: bold;
     color: #66d9ef;
   }
-  img{
+  img {
     max-width: 100%;
   }
 `;
 
 const Post = ({ data }) => (
   <Layout>
+
+    {console.log(data.datoCmsBlog)}
+    <Helmet>
+      <title>{data.datoCmsBlog.title}</title>
+      <meta
+        name="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+
+      <meta
+        name="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+
+      {/* <!-- Google / Search Engine Tags --> */}
+      <meta itemprop="name" content={data.datoCmsBlog.title} />
+      <meta
+        itemprop="description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta itemprop="image" content={data.datoCmsBlog.thumbnail.url} />
+
+      {/* <!-- Facebook Meta Tags --> */}
+      <meta property="og:url" content={`https://ivanmercedes.com/blog/${data.datoCmsBlog.postSlug}`} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={data.datoCmsBlog.title} />
+      <meta
+        property="og:description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta property="og:image" content={data.datoCmsBlog.thumbnail.url} />
+
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={data.datoCmsBlog.title} />
+      <meta
+        name="twitter:description"
+        content="Programador web  Full-stack en Santo Domingo, experto en PHP, LARAVEL, JAVASCRIPT y diversas tecnologias."
+      />
+      <meta name="twitter:image" content={data.datoCmsBlog.thumbnail.url} />
+    </Helmet>
     <Navbar />
     <article className="container">
       <BlogPost>
-        <h1 className="sheet__title">{data.datoCmsBlog.title}</h1>
+        <h1 className="blog_title">{data.datoCmsBlog.title}</h1>
         <div
-          className="sheet__body"
+          className="blog_body"
+          style={{ fontSize: 17 }}
           dangerouslySetInnerHTML={{
             __html: data.datoCmsBlog.contentNode.childMarkdownRemark.html,
           }}
@@ -45,6 +88,10 @@ export const query = graphql`
   query Posts($slug: String!) {
     datoCmsBlog(postSlug: { eq: $slug }) {
       title
+      postSlug
+      thumbnail {
+        url
+      }
       contentNode {
         childMarkdownRemark {
           html
