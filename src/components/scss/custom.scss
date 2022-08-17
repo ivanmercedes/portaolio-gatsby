@@ -165,7 +165,6 @@
   }
 }
 
-
 @for $i from 1 to 20 {
   $randomlist: randomVList();
   @while length($randomlist) < 3 {
@@ -178,7 +177,7 @@
   position: absolute;
   opacity: 0;
   overflow: visible;
-  background-size: contain; 
+  background-size: contain;
 }
 
 @for $i from 1 to 20 {
@@ -203,3 +202,8 @@
   }
 }
 
+h3 {
+  // color: #66d9ef;
+  // text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+  //   0 0 8px #03edf975;
+}

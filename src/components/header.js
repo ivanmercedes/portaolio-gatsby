@@ -54,6 +54,8 @@ const Sub = styled.h2`
   font-weight: 700;
   font-size: 1.9rem;
   color: #66d9ef;
+  text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+    0 0 8px #03edf975;
 `;
 
 const ParticleDiv = styled(Particles)`
@@ -101,7 +103,7 @@ const Header = () => {
               <Hi className="m-0">Hola 👋 soy</Hi>
               <Name>Ivan Mercedes</Name>
               <Sub>Full-stack Web Developer 👨🏻‍💻</Sub>
-              <p style={{ fontSize: "1.2rem" }}>
+              <p style={{ fontSize: "1.2rem", color: "white" }}>
                 Soy un desarrollador web con experiencia en los Stacks LAMP y
                 MERN ademas de diversas tecnologias.
               </p>
@@ -121,6 +123,5 @@ const Header = () => {
     </>
   );
 };
-
 
 export default Header;

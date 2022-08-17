@@ -14,19 +14,25 @@ const BlogPost = styled.div`
   max-width: 970px;
   margin: 7rem auto;
 
-  h2 {
+  h2,
+  .blog_title {
     font-weight: bold;
     color: #66d9ef;
+    text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+      0 0 8px #03edf975;
   }
   img {
     max-width: 100%;
+  }
+  p,
+  ol {
+    color: white;
   }
 `;
 
 const Post = ({ data }) => (
   <Layout>
-
-    {console.log(data.datoCmsBlog)}
+    {/* {console.log(data.datoCmsBlog)} */}
     <Helmet>
       <title>{data.datoCmsBlog.title}</title>
       <meta
@@ -48,7 +54,10 @@ const Post = ({ data }) => (
       <meta itemprop="image" content={data.datoCmsBlog.thumbnail.url} />
 
       {/* <!-- Facebook Meta Tags --> */}
-      <meta property="og:url" content={`https://ivanmercedes.com/blog/${data.datoCmsBlog.postSlug}`} />
+      <meta
+        property="og:url"
+        content={`https://ivanmercedes.com/blog/${data.datoCmsBlog.postSlug}`}
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={data.datoCmsBlog.title} />
       <meta

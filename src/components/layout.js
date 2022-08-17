@@ -1,7 +1,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+// import "prismjs/themes/prism-tomorrow.css";
+import "../assets/prisma-theme.css";
 import "./scss/app.scss";
+
 import { createGlobalStyle } from "styled-components";
 import Footer from "./Footer";
 

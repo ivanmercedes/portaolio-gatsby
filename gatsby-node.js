@@ -1,8 +1,8 @@
 const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     graphql(`
@@ -15,7 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       result.data.allDatoCmsBlog.edges.map(({ node: post }) => {
         createPage({
           path: `blog/${post.postSlug}`,
@@ -23,9 +23,9 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: post.postSlug,
           },
-        })
-      })
-      resolve()
-    })
-  })
-}
+        });
+      });
+      resolve();
+    });
+  });
+};

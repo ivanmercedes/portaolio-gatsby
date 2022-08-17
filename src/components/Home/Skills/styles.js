@@ -45,6 +45,8 @@ const Box = styled.div`
     text-align: center;
     margin-bottom: 1rem;
     color: #66d9ef;
+    text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+      0 0 8px #03edf975;
   }
   @media (max-width: 768px) {
     flex: 1 1 100%;
@@ -74,7 +76,7 @@ const Skill = styled.div`
   text-align: left;
   flex: 1 0 50%;
 
-  h3 svg{
+  h3 svg {
     width: 1em;
     height: 1em;
     color: #66d9ef;
