@@ -48,6 +48,12 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 1.5rem;
 `;
+
+const BlogTitle = styled.h3`
+  color: #66d9ef;
+  text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+    0 0 8px #03edf975;
+`;
 const BlogPage = ({ data }) => {
   const posts = data.allDatoCmsBlog.edges;
 
@@ -78,7 +84,7 @@ const BlogPage = ({ data }) => {
                     image={getThumbnail(post.node.thumbnail)}
                     alt=""
                   />
-                  <h3>{post.node.title}</h3>
+                  <BlogTitle>{post.node.title}</BlogTitle>
                 </LinkBlog>
               </BlogListCol>
             ))}
