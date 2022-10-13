@@ -78,6 +78,7 @@ const BlogPage = ({ data }) => {
 
           <BlogListRow>
             {posts.map((post) => (
+              // {(posts.reverse()).map((post) => (
               <BlogListCol key={post.node.originalId}>
                 <LinkBlog to={`/blog/${post.node.postSlug}`}>
                   <GatsbyImage
@@ -99,7 +100,7 @@ export default BlogPage;
 
 export const query = graphql`
   query Blogs {
-    allDatoCmsBlog {
+    allDatoCmsBlog(sort: { fields: id, order: DESC }) {
       edges {
         node {
           title
