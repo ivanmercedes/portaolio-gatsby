@@ -17,13 +17,20 @@ const Footer = () => {
       <div className="container">
         <Built>
           Built with{" "}
-          <StaticImage
-            src="../images/Gatsby_Logo.png"
-            quality={100}
-            width={160}
-            // formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Built with Gatsby"
-          />{" "}
+          <a
+            href="https://www.gatsbyjs.com/"
+            title="GatsbyJS"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <StaticImage
+              src="../images/Gatsby_Logo.png"
+              quality={100}
+              width={160}
+              // formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Built with Gatsby"
+            />
+          </a>{" "}
           Open sourced on{" "}
           <StaticImage
             src="../images/github.png"
@@ -33,13 +40,20 @@ const Footer = () => {
             alt="Built with Gatsby"
           />{" "}
           and deployed on{" "}
-          <StaticImage
-            src="../images/Cloud.svg"
-            quality={100}
-            width={60}
-            // formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Built with Gatsby"
-          />{" "}
+          <a
+            href="https://www.gatsbyjs.com/products/cloud/"
+            target="_blank"
+            rel="noreferrer"
+            title="Gatsby Cloud"
+          >
+            <StaticImage
+              src="../images/Cloud.svg"
+              quality={100}
+              width={60}
+              // formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Built with Gatsby"
+            />
+          </a>
         </Built>
       </div>
     </FooterPage>
