@@ -15,8 +15,8 @@ const BlogListSection = styled.section`
 const BlogListRow = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 13px;
   @media (max-width: 750px) {
     flex-direction: column;
   }
